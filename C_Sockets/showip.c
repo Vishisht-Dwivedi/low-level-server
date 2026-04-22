@@ -21,7 +21,7 @@ int main(int argc, char **argv){
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
 
-    if((status = getaddrinfo(argv[1], "80", &hints, &res)) != 0){
+    if((status = getaddrinfo(argv[1], "443", &hints, &res)) != 0){
         fprintf(stderr, "gai error: %s\n", gai_strerror(status));
         exit(1);
     }
